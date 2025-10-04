@@ -8,7 +8,8 @@
 
 :root h1 {
   color: #721B27;
-  font-size: 5rem;
+  font-size: 4rem;
+  font-weight: 600;
 }
 
 :root h2 {
@@ -19,4 +20,19 @@
 :root h3 {
   color: #000000;
   font-size: 2rem;
+}
+
+
+@media screen and (max-width: 768px) {
+  :root h1 {
+    font-size: 2.5rem;
+  }
+
+  :root h2 {
+    font-size: 2rem;
+  }
+
+  :root h3 {
+    font-size: 1.5rem;
+  }
 }
