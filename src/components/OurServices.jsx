@@ -1,5 +1,3 @@
-import { Globe } from 'lucide-react';
-
 const ServicesDiv = ({ title, text, marginTop, icon }) => {
   const baseStyles = "py-8 px-6 bg-[#721B27] h-[20rem] w-[20rem] rounded transition-colors duration-200 flex flex-col items-center justify-center rounded-t-[20px] rounded-bl-[60px] rounded-br-[20px]";
 
@@ -14,7 +12,7 @@ const ServicesDiv = ({ title, text, marginTop, icon }) => {
           {icon ? (
             <img src={icon} alt="Service icon"/>
           ) : (
-            <Globe className="w-8 h-8 text-[#721B27]" />
+            <img src='/icons/custom-web-icon.svg' alt="Service icon"/>
           )}
         </div>
         

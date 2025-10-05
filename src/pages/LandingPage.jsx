@@ -8,7 +8,10 @@ import backgroundImage from '../assets/general-images/hero-background.svg';
 
 import Button from '../components/Button';
 import DividerImage from '../components/Divider';
+
 import OurServicesDiv from '../components/OurServices';
+import WhyUsDiv from '../components/WhyUs';
+
 import ContactForm from '../components/ContactForm';
 
 const Home = () => {
@@ -83,15 +86,15 @@ uninterrupted growth.' marginTop='5rem' icon='/icons/maintenance-icon.svg' />
           <div className="flex justify-center">
             <DividerImage />
           </div>
-          <p className="md:hidden heading-paragraphs">We don't just build websites and apps, we engineer assets for business growth.</p>
+          <p className="md:hidden heading-paragraphs mb-5">We don't just build websites and apps, we engineer assets for business growth.</p>
         </div>
-        <div className="flex flex-col md:flex-row justify-around items-start">
-          <OurServicesDiv />
+        <div className="flex flex-col space-y-5 md:flex-row justify-around items-start">
+          <WhyUsDiv title='Strategic Partnership' text='We act as an extension of your team, collaborating on every step to ensure lasting success.' backgroundImage='/icons/why-us-1.svg' icon='/icons/about-icon1.svg' />
           <div className="text-center">
-            <p className="hidden md:block heading-paragraphs">We don't just build websites and apps, <br /> we engineer assets for business growth.</p>
-            <OurServicesDiv />
+            <p className="hidden md:block heading-paragraphs md:my-5">We don't just build websites and apps, <br /> we engineer assets for business growth.</p>
+            <WhyUsDiv title='Growth-Focused Execution' text='Our flexible architecture easily handles massive growth and new features, eliminating expensive rebuilds.' backgroundImage='/icons/why-us-2.svg' icon='/icons/about-icon2.svg' />
           </div>
-          <OurServicesDiv />
+          <WhyUsDiv title='Dedicated Long-Term Partner' text='We are your committed digital partner, offering strategic guidance and proactive support long after launch.' backgroundImage='/icons/why-us-3.svg' icon='/icons/about-icon3.svg' />
         </div>
       </section>
 
