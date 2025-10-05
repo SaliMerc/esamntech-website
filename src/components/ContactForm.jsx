@@ -11,6 +11,7 @@ const ContactForm = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState('');
+  const [phoneError, setPhoneError] = useState(''); // Added phoneError state
 
   useEffect(() => {
     if (submitStatus) {
@@ -22,15 +23,44 @@ const ContactForm = () => {
     }
   }, [submitStatus]);
 
+  const validatePhoneNumber = (phone) => {
+    const phoneRegex = /^[0-9+\-\s]*$/;
+    if (!phoneRegex.test(phone)) {
+      return 'Phone number can only contain digits, +, -, or spaces';
+    }
+    if (!/[0-9]/.test(phone)) {
+      return 'Phone number must contain at least one digit';
+    }
+    const digitsOnly = phone.replace(/[+\-\s]/g, '');
+    if (digitsOnly.length < 10) {
+      return 'Phone number must contain at least 10 digits and less than 15 digits';
+    }
+    if ( digitsOnly.length > 15) {
+      return 'Phone number must not exceed 15 digits';
+    }
+    return '';
+  };
+
   const handleChange = (e) => {
+    const { name, value } = e.target;
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [name]: value
     });
+    if (name === 'phone') {
+      setPhoneError(validatePhoneNumber(value));
+    }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    const phoneValidationError = validatePhoneNumber(formData.phone);
+    if (phoneValidationError) {
+      setPhoneError(phoneValidationError);
+      return; 
+    }
+
     setIsSubmitting(true);
     setSubmitStatus('');
 
@@ -52,6 +82,7 @@ const ContactForm = () => {
         company: '',
         projectDetails: ''
       });
+      setPhoneError(''); 
     } catch (error) {
       setSubmitStatus('error');
       console.error('Error:', error);
@@ -63,7 +94,7 @@ const ContactForm = () => {
   return (
     <form onSubmit={handleSubmit} className="max-w-[90%] md:max-w-[60%] mx-auto p-8 rounded-lg shadow-md my-8 md:mb-10 text-black">
       <fieldset className="mb-5 border border-[#721B27] rounded-md px-3 pt-0 pb-2">
-        <legend className="text-gray-800 text-sm font-normal px-1">Name</legend>
+        <legend className="text-gray-800 text-sm font-normal px-1">Name*</legend>
         <input
           type="text"
           name="name"
@@ -76,16 +107,19 @@ const ContactForm = () => {
       </fieldset>
 
       <fieldset className="mb-5 border border-[#721B27] rounded-md px-3 pt-0 pb-2">
-        <legend className="text-gray-800 text-sm font-normal px-1">Phone Number</legend>
+        <legend className="text-gray-800 text-sm font-normal px-1">Phone Number*</legend>
         <input
           type="tel"
           name="phone"
           value={formData.phone}
           onChange={handleChange}
           required
-          className="w-full px-4 py-3 placeholder-[#E8D4B8] rounded-md focus:outline-none"
+          className={`w-full px-4 py-3 placeholder-[#E8D4B8] rounded-md focus:outline-none ${phoneError ? 'border-red-500' : ''}`}
           placeholder="Your phone number"
         />
+        {phoneError && (
+          <p className="text-red-500 text-sm mt-1">{phoneError}</p>
+        )}
       </fieldset>
 
       <fieldset className="mb-5 border border-[#721B27] rounded-md px-3 pt-0 pb-2">
@@ -113,7 +147,7 @@ const ContactForm = () => {
       </fieldset>
 
       <fieldset className="mb-6 border border-[#721B27] rounded-md px-3 pt-0 pb-2">
-        <legend className="text-gray-800 text-sm font-normal px-1">Project Details</legend>
+        <legend className="text-gray-800 text-sm font-normal px-1">Project Details*</legend>
         <textarea
           name="projectDetails"
           value={formData.projectDetails}
@@ -147,7 +181,7 @@ const ContactForm = () => {
         color="maroon"
         width="w-full"
         type="submit"
-        disabled={isSubmitting}
+        disabled={isSubmitting || phoneError} 
       />
     </form>
   );
