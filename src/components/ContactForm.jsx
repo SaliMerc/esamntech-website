@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import Button from './Button'; 
+import { useState, useEffect } from 'react';
+import Button from './Button';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -11,6 +11,16 @@ const ContactForm = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState('');
+
+  useEffect(() => {
+    if (submitStatus) {
+      const timer = setTimeout(() => {
+        setSubmitStatus('');
+      }, 3000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [submitStatus]);
 
   const handleChange = (e) => {
     setFormData({
@@ -64,7 +74,7 @@ const ContactForm = () => {
           placeholder="Your name"
         />
       </fieldset>
-      
+
       <fieldset className="mb-5 border border-[#721B27] rounded-md px-3 pt-0 pb-2">
         <legend className="text-gray-800 text-sm font-normal px-1">Phone Number</legend>
         <input
@@ -77,7 +87,7 @@ const ContactForm = () => {
           placeholder="Your phone number"
         />
       </fieldset>
-      
+
       <fieldset className="mb-5 border border-[#721B27] rounded-md px-3 pt-0 pb-2">
         <legend className="text-gray-800 text-sm font-normal px-1">Email (Optional)</legend>
         <input
@@ -89,7 +99,7 @@ const ContactForm = () => {
           placeholder="Your email"
         />
       </fieldset>
-      
+
       <fieldset className="mb-5 border border-[#721B27] rounded-md px-3 pt-0 pb-2">
         <legend className="text-gray-800 text-sm font-normal px-1">Company (Optional)</legend>
         <input
@@ -101,7 +111,7 @@ const ContactForm = () => {
           placeholder="Your company"
         />
       </fieldset>
-      
+
       <fieldset className="mb-6 border border-[#721B27] rounded-md px-3 pt-0 pb-2">
         <legend className="text-gray-800 text-sm font-normal px-1">Project Details</legend>
         <textarea
@@ -114,22 +124,28 @@ const ContactForm = () => {
         />
       </fieldset>
 
-      {submitStatus === 'success' && (
-        <div className="mb-4 p-3 bg-green-100 text-green-700 rounded-md text-center">
-          Message sent successfully!
+      {submitStatus && (
+        <div className="fixed top-4 right-4 z-50 transition-all duration-300 ease-in-out">
+          {submitStatus === 'success' && (
+            <div className="p-4 bg-green-100 text-green-700 rounded-md shadow-lg flex items-center gap-2">
+              <span className="text-xl">✓</span>
+              <span>Message sent successfully!</span>
+            </div>
+          )}
+
+          {submitStatus === 'error' && (
+            <div className="p-4 bg-red-100 text-red-700 rounded-md shadow-lg flex items-center gap-2">
+              <span className="text-xl">✕</span>
+              <span>Failed to send message. Please try again.</span>
+            </div>
+          )}
         </div>
       )}
-      
-      {submitStatus === 'error' && (
-        <div className="mb-4 p-3 bg-red-100 text-red-700 rounded-md text-center">
-          Failed to send message. Please try again.
-        </div>
-      )}
-      
-      <Button 
-        text={isSubmitting ? 'Sending...' : 'Send Message'} 
-        color="maroon" 
-        width="w-full" 
+
+      <Button
+        text={isSubmitting ? 'Sending...' : 'Send Message'}
+        color="maroon"
+        width="w-full"
         type="submit"
         disabled={isSubmitting}
       />

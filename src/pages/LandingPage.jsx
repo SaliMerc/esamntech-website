@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { useEffect } from 'react';
 import { ArrowRight } from 'lucide-react';
 
 import Header from "../components/Header";
@@ -11,9 +12,22 @@ import OurServicesDiv from '../components/OurServices';
 import ContactForm from '../components/ContactForm';
 
 const Home = () => {
+
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const el = document.querySelector(location.hash);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location]);
+
+
   return (
     <>
-      <section className=" min-h-screen pt-30 bg-cover bg-no-repeat bg-center" style={{ backgroundImage: `url(${backgroundImage})` }}>
+      <section id='home' className=" min-h-screen pt-30 bg-cover bg-no-repeat bg-center" style={{ backgroundImage: `url(${backgroundImage})` }}>
         <Header />
         <div className="px-5 text-center flex flex-col min-h-[90vh] justify-between pb-30">
 
@@ -31,7 +45,7 @@ const Home = () => {
       </section>
 
       {/* services section */}
-      <section className="px-5">
+      <section className="px-5" id='services'>
         <div className="text-center">
           <h2>Our Services</h2>
           <div className="flex justify-center">
@@ -50,7 +64,7 @@ const Home = () => {
       </section>
 
       {/* why us section */}
-      <section className="px-5">
+      <section className="px-5" id='why-us'>
         <div className="text-center">
           <h2>Why Choose Us</h2>
           <div className="flex justify-center">
@@ -69,7 +83,7 @@ const Home = () => {
       </section>
 
       {/* process section */}
-      <section className="px-5">
+      <section className="px-5" id='process'>
         <div className="text-center">
           <h2>Our Simple Path to Digital Growth</h2>
           <div className="flex justify-center">
@@ -88,7 +102,7 @@ const Home = () => {
       </section>
 
       {/* pricing section */}
-      <section className="px-5">
+      <section className="px-5" id='pricing'>
         <div className="text-center">
           <h2>Simple & Transparent Pricing</h2>
           <div className="flex justify-center">
