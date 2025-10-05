@@ -14,6 +14,7 @@ import WhyUsDiv from '../components/WhyUs';
 
 import PortfolioData from '../data/portofolio-data.json';
 import PortofolioDiv from '../components/Portofolio';
+import PricingDiv from '../components/Pricing';
 
 import ContactForm from '../components/ContactForm';
 
@@ -133,10 +134,53 @@ uninterrupted growth.' marginTop='5rem' icon='/icons/maintenance-icon.svg' />
           <p className="heading-paragraphs">Choose a plan that works for you</p>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-around">
-          <OurServicesDiv />
-          <OurServicesDiv />
-          <OurServicesDiv />
+        <div className="flex flex-col md:flex-row items-center justify-center gap-10">
+          <PricingDiv
+            title="Starter"
+            text="Ideal for small businesses or personal websites"
+            price="25,000"
+            features={[
+              "Mobile responsive design",
+              "Contact form and Basic SEO Setup",
+              "Social Media Intergration",
+              "1-3 Page Custom Website",
+              "1 Month Maintenance & Support",
+            ]}
+            isPopular={false}
+            buttonText="Get Started"
+            backgroundColor="#721B27"
+            textColor="#FFFAF6"
+          />
+          <PricingDiv
+            title="Business"
+            text="Optimized for growing SMEs and service businesses."
+            price="60,000"
+            features={[
+              "Everything in starter",
+              "Advanced SEO & Analytics Setup",
+              "CRM Integration",
+              "3 Months Maintenance & Support",
+            ]}
+            isPopular={true}
+            buttonText="Get Started"
+            backgroundColor="#BCAC99"
+            buttonBackground="maroon"
+            textColor="#000000"
+          />
+          <PricingDiv
+            title="Custom Solution"
+            text="Tailored Web and Mobile applications"
+            price="60,000+"
+            features={[
+              "Everything in business",
+              "Full-Stack development",
+              "Ongoing maintenance and scaling support",
+            ]}
+            isPopular={false}
+            backgroundColor="#721B27"
+            textColor="#FFFAF6"
+            buttonText="Get Quote"
+          />
         </div>
       </section>
 
@@ -150,7 +194,7 @@ uninterrupted growth.' marginTop='5rem' icon='/icons/maintenance-icon.svg' />
           <p className="heading-paragraphs mb-5">Here are some of our previous works</p>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-around items-center">
+        <div className="flex flex-col md:flex-row gap-8 items-center justify-center">
 
           {latestPortfolioItems.map((item, index) => (
             <PortofolioDiv
