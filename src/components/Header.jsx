@@ -40,7 +40,7 @@ const Header = () => {
         {/* Logo */}
         <div className="flex-shrink-0">
           <div className="text-xl sm:text-2xl font-bold flex items-center">
-            <Link to='/'>
+            <Link to='/#home'>
                 <img src="/brand-items/esamn-main-logo.svg" alt="E-Samn Labs Logo" />
             </Link>
           </div>

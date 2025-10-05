@@ -29,11 +29,14 @@ const Home = () => {
     <>
       <section id='home' className=" min-h-screen pt-30 bg-cover bg-no-repeat bg-center" style={{ backgroundImage: `url(${backgroundImage})` }}>
         <Header />
-        <div className="px-5 text-center flex flex-col min-h-[90vh] justify-between pb-30">
+        <div className="px-5 pt-3 text-center flex flex-col min-h-[90vh] justify-between pb-30">
 
-          <div>
+          <div className="">
             <h1>Your Vision. <br className="md:hidden" /> Our Code. <br />Guaranteed Growth.</h1>
-            <p>We partner with businesses to design and develop exceptional, scalable web and mobile solutions that turn complex challenges into competitive advantages.</p>
+            <div>
+              <p className="text-[1rem] md:text-[1.5rem] mt-6 md:mt-3">We partner with businesses to design and develop exceptional, scalable web and <br className="hidden md:block" /> mobile solutions that turn complex challenges into competitive advantages.</p>
+            </div>
+            
           </div>
 
           <div className="buttons flex gap-4 md:gap-7 justify-center">
@@ -108,7 +111,7 @@ const Home = () => {
           <div className="flex justify-center">
             <DividerImage />
           </div>
-          <p>Simple & Transparent Pricing</p>
+          <p>Choose a plan that works for you</p>
         </div>
 
         <div className="flex flex-col md:flex-row justify-around">
