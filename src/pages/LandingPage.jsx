@@ -36,7 +36,7 @@ const Home = () => {
             <div>
               <p className="text-[1rem] md:text-[1.5rem] mt-6 md:mt-3">We partner with businesses to design and develop exceptional, scalable web and <br className="hidden md:block" /> mobile solutions that turn complex challenges into competitive advantages.</p>
             </div>
-            
+
           </div>
 
           <div className="buttons flex gap-4 md:gap-7 justify-center">
@@ -48,37 +48,47 @@ const Home = () => {
       </section>
 
       {/* services section */}
-      <section className="px-5" id='services'>
-        <div className="text-center">
+      <section className="px-5 mt-7" id='services'>
+        <div className="text-center space-y-3 mb-3">
           <h2>Our Services</h2>
           <div className="flex justify-center">
             <DividerImage />
           </div>
-          <p>Delivering the Digital Solutions Your Business Needs to Thrive—Not Just Survive.</p>
+          <p className="heading-paragraphs">Delivering the Digital Solutions Your Business Needs to Thrive—Not Just Survive.</p>
         </div>
 
         <div className="flex flex-col md:flex-row justify-around">
-          <OurServicesDiv />
-          <OurServicesDiv />
-          <OurServicesDiv />
-          <OurServicesDiv />
+          <OurServicesDiv title='Business Websites' text='High-performance websites 
+that convert visitors into leads and 
+scale with your growth.' icon='/icons/globe-icon.svg' />
+          <OurServicesDiv title='E-Commerce Stores' text='Secure, user-friendly platforms
+ built for maximum online revenue 
+and seamless transactions.' marginTop='5rem' icon='/icons/cart-icon.svg' />
+          <OurServicesDiv title='Custom Web and 
+Mobile Apps' text='Bespoke software solutions that 
+streamline operations and give you 
+a strong competitive edge.' icon='/icons/custom-web-icon.svg' />
+          <OurServicesDiv title='Web Maintenance' text='Comprehensive plans that keep
+ your platform fast, secure, and 
+up-to-date, ensuring 
+uninterrupted growth.' marginTop='5rem' icon='/icons/maintenance-icon.svg' />
         </div>
 
       </section>
 
       {/* why us section */}
-      <section className="px-5" id='why-us'>
-        <div className="text-center">
+      <section className="px-5 mt-7" id='why-us'>
+        <div className="text-center mb-3 space-y-3">
           <h2>Why Choose Us</h2>
           <div className="flex justify-center">
             <DividerImage />
           </div>
-          <p className="md:hidden">We don't just build websites and apps, we engineer assets for business growth.</p>
+          <p className="md:hidden heading-paragraphs">We don't just build websites and apps, we engineer assets for business growth.</p>
         </div>
         <div className="flex flex-col md:flex-row justify-around items-start">
           <OurServicesDiv />
           <div className="text-center">
-            <p className="hidden md:block">We don't just build websites and apps, <br /> we engineer assets for business growth.</p>
+            <p className="hidden md:block heading-paragraphs">We don't just build websites and apps, <br /> we engineer assets for business growth.</p>
             <OurServicesDiv />
           </div>
           <OurServicesDiv />
@@ -156,10 +166,10 @@ const Home = () => {
           <p>Lets turn your vision into a scalable solution</p>
         </div>
         <div>
-          <ContactForm/>
+          <ContactForm />
         </div>
       </section>
-      <Footer/>
+      <Footer />
     </>
   );
 };

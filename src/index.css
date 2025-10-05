@@ -15,11 +15,16 @@
 :root h2 {
   color: #721B27;
   font-size: 3rem;
+  font-weight: 600;
 }
 
 :root h3 {
   color: #000000;
-  font-size: 2rem;
+  font-size: 1.4rem;
+}
+
+.heading-paragraphs {
+  font-size: 1.2rem;
 }
 
 
@@ -34,5 +39,9 @@
 
   :root h3 {
     font-size: 1.5rem;
+  }
+
+  .heading-paragraphs {
+    font-size: 1rem;
   }
 }

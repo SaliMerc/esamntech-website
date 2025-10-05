@@ -1,6 +1,6 @@
 import { Globe } from 'lucide-react';
 
-const ServicesDiv = ({ title, text, marginTop, icon }) => {
+const WhyUsDiv = ({ title, text, marginTop, icon }) => {
   const baseStyles = "py-8 px-6 bg-[#721B27] h-[20rem] w-[20rem] rounded transition-colors duration-200 flex flex-col items-center justify-center rounded-t-[20px] rounded-bl-[60px] rounded-br-[20px]";
 
   return (
@@ -35,4 +35,4 @@ const ServicesDiv = ({ title, text, marginTop, icon }) => {
   );
 };
 
-export default ServicesDiv;
+export default WhyUsDiv;
