@@ -1,47 +1,64 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import Button from '../components/Button';
+
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const navItems = [
-    { name: 'Home', href: '#home' },
-    { name: 'Why Us', href: '#why-us' },
-    { name: 'Our Services', href: '#services' },
-    { name: 'Portfolio', href: '#portfolio' },
-    { name: 'Pricing', href: '#pricing' },
+    { name: 'Home', href: '/' },
+    { name: 'Why Us', href: '/#why-us' },
+    { name: 'Our Services', href: '/#services' },
+    { name: 'Portfolio', href: '/portofolio' },
+    { name: 'Pricing', href: '/#pricing' },
   ];
 
   return (
-    <header className="bg-[#FFFAF6] w-full fixed top-0 z-50">
-      <nav className="mx-auto px-4 sm:px-6 lg:px-4 max-w-7xl flex items-center justify-between h-30">
+    <header className={`w-full fixed top-0 z-50 transition-colors duration-300 ${
+        isScrolled ? 'bg-[#FFFAF6]' : 'bg-[#FFFAF600]'
+      }`}>
+      <nav className="mx-auto px-4 sm:px-6 lg:px-4 max-w-7xl flex items-center justify-between h-28">
 
         {/* Logo */}
         <div className="flex-shrink-0">
           <div className="text-xl sm:text-2xl font-bold flex items-center">
-            <span className="text-[#721B27]">
+            <Link to='/'>
                 <img src="/brand-items/esamn-main-logo.svg" alt="E-Samn Labs Logo" />
-            </span>
+            </Link>
           </div>
         </div>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
           {navItems.map((item) => (
-            <a
+            <Link
               key={item.name}
-              href={item.href}
+              to={item.href}
               className="text-gray-800 hover:text-[#721B27] transition-colors duration-200 font-medium text-sm lg:text-base"
             >
               {item.name}
-            </a>
+            </Link>
           ))}
-          <a
-            href="#contact"
-            className="bg-[#721B27] text-white px-4 sm:px-6 py-2 rounded-md hover:bg-[#721B27] transition-colors duration-200 font-medium text-sm lg:text-base"
-          >
-            Contact
-          </a>
+
+          <Button text="Contact" color="maroon" width="w-35" to="/#contact" />
         </div>
 
         {/* Mobile menu button */}
@@ -68,13 +85,15 @@ const Header = () => {
                 {item.name}
               </a>
             ))}
-            <a
+            {/* <a
               href="#contact"
               className="bg-[#721B27] text-white px-4 py-2 rounded-md hover:bg-[#721B27] transition-colors duration-200 font-medium text-center text-sm"
               onClick={() => setIsMenuOpen(false)}
             >
               Contact
-            </a>
+            </a> */}
+
+            <Button text="Contact" color="maroon" width="w-full" to="/#contact" onClick={() => setIsMenuOpen(false)} />
           </div>
         </div>
       </nav>
