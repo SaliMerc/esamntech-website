@@ -12,11 +12,17 @@ import DividerImage from '../components/Divider';
 import OurServicesDiv from '../components/OurServices';
 import WhyUsDiv from '../components/WhyUs';
 
+import PortfolioData from '../data/portofolio-data.json';
+import PortofolioDiv from '../components/Portofolio';
+
 import ContactForm from '../components/ContactForm';
+
+
 
 const Home = () => {
 
   const location = useLocation();
+  const latestPortfolioItems = PortfolioData.slice(0, 3);
 
   useEffect(() => {
     if (location.hash) {
@@ -99,32 +105,32 @@ uninterrupted growth.' marginTop='5rem' icon='/icons/maintenance-icon.svg' />
       </section>
 
       {/* process section */}
-      <section className="px-5" id='process'>
-        <div className="text-center">
+      <section className="mt-7" id='process'>
+        <div className="text-center px-5 mb-3 space-y-3">
           <h2>Our Simple Path to Digital Growth</h2>
           <div className="flex justify-center">
             <DividerImage />
           </div>
-          <p>Transparent steps, predictable results.</p>
+          <p className="md:my-5 heading-paragraphs">Transparent steps, predictable results.</p>
         </div>
-        <div>
-          <div className="flex flex-col md:flex-row justify-around">
-            <OurServicesDiv />
-            <OurServicesDiv />
-            <OurServicesDiv />
-            <OurServicesDiv />
+        <div className="min-h-[50rem] md:min-h-[30rem] bg-[#BCAC99] flex items-center justify-center">
+          <div className="flex flex-col md:flex-row gap-5 my-3 px-5">
+            <WhyUsDiv title='Discovery & Strategy' text='We align on goals, audience and need' backgroundImage='/icons/process-background.svg' icon='/icons/process-icon1.svg' />
+            <WhyUsDiv title='Design & UI/UX' text='Wireframes, mockups, and prototype' backgroundImage='/icons/process-background.svg' icon='/icons/process-icon2.svg' />
+            <WhyUsDiv title='Development  &Testing' text='Scalable, secure code with rigorous testing for smooth performance across all devices' backgroundImage='/icons/process-background.svg' icon='/icons/process-icon3.svg' />
+            <WhyUsDiv title='Launch & Partnership' text='Seamless Launch and longterm support to ensure sustained growth' backgroundImage='/icons/process-background.svg' icon='/icons/process-icon4.svg' />
           </div>
         </div>
       </section>
 
       {/* pricing section */}
-      <section className="px-5" id='pricing'>
-        <div className="text-center">
+      <section className="px-5 mt-7" id='pricing'>
+        <div className="text-center mb-3 space-y-3">
           <h2>Simple & Transparent Pricing</h2>
           <div className="flex justify-center">
             <DividerImage />
           </div>
-          <p>Choose a plan that works for you</p>
+          <p className="heading-paragraphs">Choose a plan that works for you</p>
         </div>
 
         <div className="flex flex-col md:flex-row justify-around">
@@ -135,23 +141,29 @@ uninterrupted growth.' marginTop='5rem' icon='/icons/maintenance-icon.svg' />
       </section>
 
       {/* portofolio section */}
-      <section className="px-5">
-        <div className="text-center">
+      <section className="px-5 mt-7">
+        <div className="text-center mb-3 space-y-3">
           <h2>Our Works</h2>
           <div className="flex justify-center">
             <DividerImage />
           </div>
-          <p>Here are some of our previous works</p>
+          <p className="heading-paragraphs mb-5">Here are some of our previous works</p>
         </div>
 
         <div className="flex flex-col md:flex-row justify-around items-center">
-          <OurServicesDiv />
-          <OurServicesDiv />
-          <OurServicesDiv />
+
+          {latestPortfolioItems.map((item, index) => (
+            <PortofolioDiv
+              key={index}
+              title={item.title}
+              text={item.text}
+              to={item.to}
+            />
+          ))}
 
           <div>
             <Link to='/portofolio'>
-              <div className="flex">
+              <div className="flex text-[#721B27] font-semibold">
                 See All <ArrowRight size={24} color="#721B27" />
               </div>
             </Link>
@@ -160,13 +172,13 @@ uninterrupted growth.' marginTop='5rem' icon='/icons/maintenance-icon.svg' />
       </section>
 
       {/* contact section */}
-      <section id="contact" className="px-5">
-        <div className="text-center">
+      <section id="contact" className="px-5 mt-7">
+        <div className="text-center mb-3 space-y-3">
           <h2>Ready to Grow Your Business</h2>
           <div className="flex justify-center">
             <DividerImage />
           </div>
-          <p>Lets turn your vision into a scalable solution</p>
+          <p className="heading-paragraphs">Lets turn your vision into a scalable solution</p>
         </div>
         <div>
           <ContactForm />

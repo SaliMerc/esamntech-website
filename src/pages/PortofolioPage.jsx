@@ -2,32 +2,37 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 import DividerImage from '../components/Divider';
-import OurServicesDiv from '../components/OurServices';
 
-const Portofolio= () => {
+import PortfolioData from '../data/portofolio-data.json';
+import PortofolioDiv from '../components/Portofolio';
+
+const Portofolio = () => {
   return (
     <>
-    <section className="min-h-screen pt-30">
-    <Header />
-      <section className="px-5">
-        <div className="text-center">
-          <h2>Our Works</h2>
-          <div className="flex justify-center">
-            <DividerImage />
+      <section className="min-h-screen py-30">
+        <Header />
+        <section className="px-5 mt-7">
+          <div className="text-center space-y-3 mb-3">
+            <h2>Our Works</h2>
+            <div className="flex justify-center">
+              <DividerImage />
+            </div>
+            <p className="heading-paragraphs mb-5">Here are some of our previous works</p>
           </div>
-          <p>Here are some of our previous works</p>
-        </div>
 
-        <div className="flex flex-col md:flex-row justify-around">
-          <OurServicesDiv />
-          <OurServicesDiv />
-          <OurServicesDiv />
-          <OurServicesDiv />
-        </div>
-
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 justify-items-center">
+            {PortfolioData.map((item, index) => (
+              <PortofolioDiv
+                key={index}
+                title={item.title}
+                text={item.text}
+                to={item.to}
+              />
+            ))}
+          </div>
+        </section>
       </section>
-      </section>
-      <Footer/>
+      <Footer />
     </>
   );
 };
