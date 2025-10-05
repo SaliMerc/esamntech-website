@@ -83,6 +83,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <hr className='mt-8' />
       <div className='flex flex-col md:flex-row justify-between'>
         <p className="text-xs mt-8 md:ml-22">© 2025 esamnmlabs. All rights reserved.</p>
         <p className="text-xs mt-8 md:ml-22">
