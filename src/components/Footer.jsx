@@ -37,7 +37,7 @@ const Footer = () => {
 
         {/* Legal Terms */}
         <div>
-          <h4 className="text-lg font-semibold mb-2">Legal Terms</h4>
+          <h4 className="font-semibold mb-2">Legal Terms</h4>
           <ul className="space-y-1 text-sm">
             <li>
               <Link to='/privacy-policy' className='hover:text-gray-300 visited:text-[#BCAC99]'>
@@ -54,7 +54,7 @@ const Footer = () => {
 
         {/* Contact */}
         <div>
-          <h4 className="text-lg font-semibold mb-2">Contact</h4>
+          <h4 className="font-semibold mb-2">Contact</h4>
           <ul className="space-y-2.5 text-sm">
             <li className="flex items-center">
               <a href="mailto:info@esamnmlabs.tech" className="hover:text-gray-300">
