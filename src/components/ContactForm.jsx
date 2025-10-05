@@ -11,7 +11,8 @@ const ContactForm = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState('');
-  const [phoneError, setPhoneError] = useState(''); // Added phoneError state
+  const [phoneError, setPhoneError] = useState('');
+  const [emailError, setEmailError] = useState('');
 
   useEffect(() => {
     if (submitStatus) {
@@ -33,10 +34,19 @@ const ContactForm = () => {
     }
     const digitsOnly = phone.replace(/[+\-\s]/g, '');
     if (digitsOnly.length < 10) {
-      return 'Phone number must contain at least 10 digits and less than 15 digits';
+      return 'Phone number must contain at least 10 digits';
     }
-    if ( digitsOnly.length > 15) {
+    if (digitsOnly.length > 15) {
       return 'Phone number must not exceed 15 digits';
+    }
+    return '';
+  };
+
+  const validateEmail = (email) => {
+    if (!email) return ''; // Email is optional, so empty is valid
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      return 'Please enter a valid email address';
     }
     return '';
   };
@@ -50,15 +60,20 @@ const ContactForm = () => {
     if (name === 'phone') {
       setPhoneError(validatePhoneNumber(value));
     }
+    if (name === 'email') {
+      setEmailError(validateEmail(value));
+    }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     const phoneValidationError = validatePhoneNumber(formData.phone);
-    if (phoneValidationError) {
+    const emailValidationError = validateEmail(formData.email);
+    if (phoneValidationError || emailValidationError) {
       setPhoneError(phoneValidationError);
-      return; 
+      setEmailError(emailValidationError);
+      return;
     }
 
     setIsSubmitting(true);
@@ -82,7 +97,8 @@ const ContactForm = () => {
         company: '',
         projectDetails: ''
       });
-      setPhoneError(''); 
+      setPhoneError('');
+      setEmailError('');
     } catch (error) {
       setSubmitStatus('error');
       console.error('Error:', error);
@@ -129,9 +145,12 @@ const ContactForm = () => {
           name="email"
           value={formData.email}
           onChange={handleChange}
-          className="w-full px-4 py-3 placeholder-[#E8D4B8] rounded-md focus:outline-none"
+          className={`w-full px-4 py-3 placeholder-[#E8D4B8] rounded-md focus:outline-none ${emailError ? 'border-red-500' : ''}`}
           placeholder="Your email"
         />
+        {emailError && (
+          <p className="text-red-500 text-sm mt-1">{emailError}</p>
+        )}
       </fieldset>
 
       <fieldset className="mb-5 border border-[#721B27] rounded-md px-3 pt-0 pb-2">
@@ -181,7 +200,7 @@ const ContactForm = () => {
         color="maroon"
         width="w-full"
         type="submit"
-        disabled={isSubmitting || phoneError} 
+        disabled={isSubmitting || phoneError || emailError}
       />
     </form>
   );
