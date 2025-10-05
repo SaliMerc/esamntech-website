@@ -1,27 +1,12 @@
 [
   {
-    "title": "TechTrend Innovations",
-    "text": "Developed a high-performance e-commerce platform with seamless payment integration and advanced product filtering.",
-    "to": "https://www.techtrendinnovations.com"
+    "title": "LughaNest",
+    "text": "Developed a Kenyan Language learning web application with peer chatting system to help learners learn kenyan languages",
+    "to": "https://lughanest.vercel.app/"
   },
   {
-    "title": "GrowEasy Solutions",
-    "text": "Built a custom CRM web application to streamline client management and automate workflows.",
-    "to": "https://www.groweasysolutions.com"
-  },
-  {
-    "title": "CreativePulse Studio",
-    "text": "Designed a visually stunning portfolio website to showcase their creative projects with smooth animations.",
-    "to": "https://www.creativepulsestudio.com"
-  },
-  {
-    "title": "HealthSync Systems",
-    "text": "Created a mobile-friendly healthcare app for appointment scheduling and patient record management.",
-    "to": "https://www.healthsyncsystems.com"
-  },
-  {
-    "title": "EduBright Academy",
-    "text": "Developed an interactive learning management system with course tracking and gamified quizzes.",
-    "to": "https://www.edubrightacademy.com"
+    "title": "SiteLogger",
+    "text": "Built a construction management system to help construction profesionals to easily log and report their daily activities",
+    "to": "https://sitemngmtapp-4.onrender.com/"
   }
 ]

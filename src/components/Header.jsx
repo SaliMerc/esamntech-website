@@ -52,7 +52,7 @@ const Header = () => {
             <Link
               key={item.name}
               to={item.href}
-              className="text-gray-800 hover:text-[#721B27] transition-colors duration-200 font-medium text-sm lg:text-base"
+              className="text-black hover:text-[#721B27] hover:underline transition-colors duration-200 font-medium text-sm lg:text-base"
             >
               {item.name}
             </Link>
@@ -73,7 +73,7 @@ const Header = () => {
         </div>
 
         {/* Mobile Navigation */}
-        <div className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'} absolute top-30 right-4 w-[90%] h-[100vh] bg-[#FFFAF6] shadow-lg rounded-lg px-10 py-4`}>
+        <div className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'} absolute top-25 right-4 w-[90%] h-[100vh] bg-[#FFFAF6] shadow-lg rounded-lg px-10 py-4`}>
           <div className="flex flex-col space-y-5">
             {navItems.map((item) => (
               <a
