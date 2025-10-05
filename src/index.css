@@ -24,7 +24,7 @@
 }
 
 :root h4 {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 600;
 }
 
@@ -45,6 +45,11 @@
   :root h3 {
     font-size: 1.5rem;
   }
+
+  :root h4 {
+  font-size: 1.2rem;
+}
+
 
   .heading-paragraphs {
     font-size: 1rem;
