@@ -20,7 +20,7 @@ const Portofolio = () => {
             <p className="heading-paragraphs mb-5">Here are some of our previous works</p>
           </div>
 
-          <div className="flex flex-col md:flex-row flex-wrap gap-8 justify-center">
+          <div className="flex flex-col md:flex-row flex-wrap gap-8 items-center justify-center">
             {PortfolioData.map((item, index) => (
               <PortofolioDiv
                 key={index}
