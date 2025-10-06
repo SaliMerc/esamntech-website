@@ -95,7 +95,7 @@ uninterrupted growth.' marginTop='5rem' icon='/icons/maintenance-icon.svg' />
           </div>
           <p className="md:hidden heading-paragraphs mb-5">We don't just build websites and apps, we engineer assets for business growth.</p>
         </div>
-        <div className="flex flex-col space-y-5 md:flex-row items-center justify-center">
+        <div className="flex flex-col space-y-5 md:flex-row md:space-x-7 items-center justify-center">
           <WhyUsDiv title='Strategic Partnership' text='We act as an extension of your team, collaborating on every step to ensure lasting success.' backgroundImage='/icons/why-us-1.svg' icon='/icons/about-icon1.svg' />
           <div className="text-center">
             <p className="hidden md:block heading-paragraphs md:my-5">We don't just build websites and apps, <br /> we engineer assets for business growth.</p>
@@ -114,7 +114,7 @@ uninterrupted growth.' marginTop='5rem' icon='/icons/maintenance-icon.svg' />
           </div>
           <p className="md:my-5 heading-paragraphs">Transparent steps, predictable results.</p>
         </div>
-        <div className="min-h-[50rem] md:min-h-[30rem] bg-[#BCAC99] flex items-center justify-center">
+        <div className="min-h-[50rem] md:min-h-[30rem] bg-[#721B27] flex items-center justify-center">
           <div className="flex flex-col md:flex-row gap-5 my-3 px-5 items-center justify-center">
             <WhyUsDiv title='Discovery & Strategy' text='We align on goals, audience and need' backgroundImage='/icons/process-background.svg' icon='/icons/process-icon1.svg' />
             <WhyUsDiv title='Design & UI/UX' text='Wireframes, mockups, and prototype' backgroundImage='/icons/process-background.svg' icon='/icons/process-icon2.svg' />
