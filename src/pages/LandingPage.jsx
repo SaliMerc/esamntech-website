@@ -4,7 +4,7 @@ import { ArrowRight } from 'lucide-react';
 
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import backgroundImage from '../assets/general-images/hero-background.svg';
+import backgroundImage from '/general-images/hero-background.svg';
 
 import Button from '../components/Button';
 import DividerImage from '../components/Divider';
@@ -42,7 +42,7 @@ const Home = () => {
         <div className="px-5 pt-3 text-center flex flex-col min-h-[90vh] justify-between pb-30">
 
           <div className="">
-            <h1>Your Vision. <br className="md:hidden" /> Our Code. <br />Guaranteed Growth.</h1>
+            <h1 className="animate-bounce">Your Vision. <br className="md:hidden" /> Our Code. <br />Guaranteed Growth.</h1>
             <div>
               <p className="text-[1rem] md:text-[1.5rem] mt-6 md:mt-3">We partner with businesses to design and develop exceptional, scalable web and <br className="hidden md:block" /> mobile solutions that turn complex challenges into competitive advantages.</p>
             </div>
