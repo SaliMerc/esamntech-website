@@ -6,7 +6,7 @@ const ServicesDiv = ({ title, text, marginTop, icon }) => {
       className={`${baseStyles} md:${marginTop || "mt-2"}`}
       style={{ marginTop: marginTop || "1rem" }} 
     >
-      <div className="flex flex-col items-center text-center gap-4">
+      <div className="flex flex-col items-center text-center gap-4 transition-transform duration-300 hover:translate-y-[-10px]">
         {/* Icon */}
         <div>
           {icon ? (

@@ -37,14 +37,14 @@ const Home = () => {
 
   return (
     <>
-      <section id='home' className=" min-h-screen pt-30 bg-cover bg-no-repeat bg-center" style={{ backgroundImage: `url(${backgroundImage})` }}>
+      <section id='home' className=" min-h-screen pt-30 bg-cover bg-no-repeat bg-center " style={{ backgroundImage: `url(${backgroundImage})` }}>
         <Header />
         <div className="px-5 pt-3 text-center flex flex-col min-h-[90vh] justify-between pb-30">
 
           <div className="">
-            <h1 className="animate-bounce">Your Vision. <br className="md:hidden" /> Our Code. <br />Guaranteed Growth.</h1>
+            <h1 className="transition-transform duration-300 hover:scale-110 hover:translate-y-[-5px]">Your Vision. <br className="md:hidden" /> Our Code. <br />Guaranteed Growth.</h1>
             <div>
-              <p className="text-[1rem] md:text-[1.5rem] mt-6 md:mt-3">We partner with businesses to design and develop exceptional, scalable web and <br className="hidden md:block" /> mobile solutions that turn complex challenges into competitive advantages.</p>
+              <p className="text-[1rem] md:text-[1.5rem] mt-6 md:mt-3 transition-transform duration-300 hover:scale-105 hover:translate-y-[-5px]">We partner with businesses to design and develop exceptional, scalable web and <br className="hidden md:block" /> mobile solutions that turn complex challenges into competitive advantages.</p>
             </div>
 
           </div>
@@ -59,15 +59,15 @@ const Home = () => {
 
       {/* services section */}
       <section className="px-5 mt-7" id='services'>
-        <div className="text-center space-y-3 mb-3">
+        <div className="text-center space-y-3 mb-3 transition-transform duration-300 hover:translate-y-[-10px]">
           <h2>Our Services</h2>
-          <div className="flex justify-center">
+          <div className="flex justify-center ">
             <DividerImage />
           </div>
           <p className="heading-paragraphs">Delivering the Digital Solutions Your Business Needs to Thrive—Not Just Survive.</p>
         </div>
 
-        <div className="flex flex-col md:flex-row gap-3 md:gap-8 items-center justify-center">
+        <div className="flex flex-col md:flex-row gap-3 md:gap-8 items-center justify-center ">
           <OurServicesDiv title='Business Websites' text='High-performance websites 
 that convert visitors into leads and 
 scale with your growth.' icon='/icons/globe-icon.svg' />
@@ -88,7 +88,7 @@ uninterrupted growth.' marginTop='5rem' icon='/icons/maintenance-icon.svg' />
 
       {/* why us section */}
       <section className="px-5 mt-7" id='why-us'>
-        <div className="text-center mb-3 space-y-3">
+        <div className="text-center mb-3 space-y-3 transition-transform duration-300 hover:translate-y-[-10px]">
           <h2>Why Choose Us</h2>
           <div className="flex justify-center">
             <DividerImage />
@@ -107,7 +107,7 @@ uninterrupted growth.' marginTop='5rem' icon='/icons/maintenance-icon.svg' />
 
       {/* process section */}
       <section className="mt-7" id='process'>
-        <div className="text-center px-5 mb-3 space-y-3">
+        <div className="text-center px-5 mb-3 space-y-3 transition-transform duration-300 hover:translate-y-[-10px]">
           <h2>Our Simple Path to Digital Growth</h2>
           <div className="flex justify-center">
             <DividerImage />
@@ -126,7 +126,7 @@ uninterrupted growth.' marginTop='5rem' icon='/icons/maintenance-icon.svg' />
 
       {/* pricing section */}
       <section className="px-5 mt-7" id='pricing'>
-        <div className="text-center mb-3 space-y-3">
+        <div className="text-center mb-3 space-y-3 transition-transform duration-300 hover:translate-y-[-10px]">
           <h2>Simple & Transparent Pricing</h2>
           <div className="flex justify-center">
             <DividerImage />
@@ -186,7 +186,7 @@ uninterrupted growth.' marginTop='5rem' icon='/icons/maintenance-icon.svg' />
 
       {/* portofolio section */}
       <section className="px-5 mt-7">
-        <div className="text-center mb-3 space-y-3">
+        <div className="text-center mb-3 space-y-3 transition-transform duration-300 hover:translate-y-[-10px]">
           <h2>Our Works</h2>
           <div className="flex justify-center">
             <DividerImage />
@@ -217,7 +217,7 @@ uninterrupted growth.' marginTop='5rem' icon='/icons/maintenance-icon.svg' />
 
       {/* contact section */}
       <section id="contact" className="px-5 mt-7">
-        <div className="text-center mb-3 space-y-3">
+        <div className="text-center mb-3 space-y-3 transition-transform duration-300 hover:translate-y-[-10px]">
           <h2>Ready to Grow Your Business</h2>
           <div className="flex justify-center">
             <DividerImage />

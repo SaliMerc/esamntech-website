@@ -3,7 +3,7 @@ import { Check } from 'lucide-react';
 
 const Pricing = ({ title, price, features, text, buttonText, isPopular = false, backgroundColor = 'white', textColor = '#FFFAF6', buttonBackground = 'beige' }) => {
     return (
-        <div className={`pricing-card h-[35rem] w-[20rem] rounded-t-[20px] rounded-bl-[20px] p-5 text-left flex flex-col justify-between shadow-md ${isPopular ? 'border-2 border-[#721B27]' : ''}`} style={{ backgroundColor, color: textColor }}>
+        <div className={`transition-transform duration-300 hover:translate-y-[-10px] pricing-card h-[35rem] w-[20rem] rounded-t-[20px] rounded-bl-[20px] p-5 text-left flex flex-col justify-between shadow-md ${isPopular ? 'border-2 border-[#721B27]' : ''}`} style={{ backgroundColor, color: textColor }}>
 
             {isPopular && (
                 <Button text="Popular" color="white" width="w-[40%]" />

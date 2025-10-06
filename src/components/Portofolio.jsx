@@ -16,7 +16,7 @@ const PortfolioDiv = ({ title, text, to }) => {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <div className="flex flex-col items-center text-center gap-4">
+      <div className="flex flex-col items-center text-center gap-4 transition-transform duration-300 hover:translate-y-[-10px]">
         {/* Title */}
         <h3 className="text-[#000000] font-bold">
           {title || "Business Websites"}

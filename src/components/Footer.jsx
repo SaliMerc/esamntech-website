@@ -70,13 +70,13 @@ const Footer = () => {
           <div className="mt-2">
             <h5 className="text-sm font-medium mb-2 underline mt-5">Social Media</h5>
             <div className="flex space-x-2">
-              <a href="https://instagram.com" aria-label="LinkedIn">
+              <a href="https://www.e-samnlab.me/" aria-label="LinkedIn">
                 <img src="/icons/linkedin-icon.svg" alt="LinkedIn"  className='pr-4'/>
               </a>
-              <a href="https://twitter.com" aria-label="TikTok">
+              <a href="http://tiktok.com/@e_samn_labs" aria-label="TikTok">
                 <img src="/icons/tiktok-icon.svg" alt="TikTok"  className='pr-4'/>
               </a>
-              <a href="https://facebook.com" aria-label="Facebook">
+              <a href="https://www.facebook.com/share/16h797eSad/" aria-label="Facebook">
                 <img src="/icons/facebook-icon.svg" alt="Facebook"  className='pr-4'/>
               </a>
             </div>

@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import Button from './Button';
 
+const GOOGLE_SHEETS_URL = import.meta.env.VITE_GOOGLE_SHEETS_URL
+
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -80,7 +82,7 @@ const ContactForm = () => {
     setSubmitStatus('');
 
     try {
-      const response = await fetch('https://script.google.com/macros/s/AKfycbyVwB68Pga_hh19rny1LSZWkrqMSbrQ2-wQPk7us-jsgCCDru82M5AiYmXy960WhLazFA/exec', {
+      const response = await fetch(GOOGLE_SHEETS_URL, {
         method: 'POST',
         mode: 'no-cors',
         headers: {

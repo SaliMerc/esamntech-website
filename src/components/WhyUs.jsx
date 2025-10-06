@@ -8,7 +8,7 @@ const WhyUsDiv = ({ title, text, icon, backgroundImage }) => {
       className={baseStyles}
       style={{ backgroundImage: backgroundImage ? `url(${backgroundImage})` : '/icons/why-us-1.svg' }}
     >
-      <div className="flex flex-col items-center text-center gap-4">
+      <div className="flex flex-col items-center text-center gap-4 transition-transform duration-300 hover:translate-y-[-10px]">
         {/* Icon */}
         <div>
           {icon ? (
