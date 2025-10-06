@@ -70,7 +70,7 @@ const Footer = () => {
           <div className="mt-2">
             <h5 className="text-sm font-medium mb-2 underline mt-5">Social Media</h5>
             <div className="flex space-x-2">
-              <a href="https://www.e-samnlab.me/" aria-label="LinkedIn">
+              <a href="https://linkedin.com/company/e-samn-labs" aria-label="LinkedIn">
                 <img src="/icons/linkedin-icon.svg" alt="LinkedIn"  className='pr-4'/>
               </a>
               <a href="http://tiktok.com/@e_samn_labs" aria-label="TikTok">
