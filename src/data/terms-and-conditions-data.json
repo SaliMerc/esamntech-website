@@ -1,0 +1,90 @@
+{
+  "clauses": [
+    {
+      "title": "1. Services",
+      "items": [
+        "E-Samn Labs provides website development, e-commerce solutions, custom software, and related consulting services.",
+        "Pricing, timelines, and deliverables will be agreed separately in a written proposal or quotation."
+      ]
+    },
+    {
+      "title": "2. Payment Terms",
+      "items": [
+        "Clients must pay 25% of the total project cost upfront before work begins and 25% upon design approval.",
+        "The balance is payable upon completion and delivery of the project.",
+        "The 25% deposit is non-refundable once work has commenced."
+      ]
+    },
+    {
+      "title": "3. Domain & Hosting",
+      "items": [
+        "Clients are responsible for purchasing and maintaining their own domain names and hosting plans.",
+        "E-Samn Labs does not include domain or hosting costs in its charges.",
+        "We may recommend third-party providers but are not responsible for their performance."
+      ]
+    },
+    {
+      "title": "4. Client Responsibilities",
+      "items": [
+        "Provide timely content, images, and other required materials.",
+        "Ensure all provided materials are legally owned or licensed.",
+        "Provide prompt feedback and approvals to avoid project delays."
+      ]
+    },
+    {
+      "title": "5. Intellectual Property",
+      "items": [
+        "Final deliverables (design, code, etc.) become the Client’s property only after full payment.",
+        "Pre-existing code, tools, or frameworks used remain the property of E-Samn Labs."
+      ]
+    },
+    {
+      "title": "6. Revisions & Changes",
+      "items": [
+        "The project includes a limited number of revisions as specified in the agreement.",
+        "Any changes outside the agreed scope will require a change request and additional fees."
+      ]
+    },
+    {
+      "title": "7. Project Delays",
+      "items": [
+        "We provide services with reasonable skill and care.",
+        "Delays due to client feedback, content delays, or third-party issues (e.g., hosting providers, APIs) are not our responsibility."
+      ]
+    },
+    {
+      "title": "8. Limitation of Liability",
+      "items": [
+        "E-Samn Labs’ liability is limited to the amount paid by the Client for the project.",
+        "We are not liable for indirect or consequential losses, including lost revenue, data, or termination."
+      ]
+    },
+    {
+      "title": "9. Termination",
+      "items": [
+        "Either party may terminate the agreement with written notice.",
+        "The Client will be invoiced for work completed up to the termination date.",
+        "Deposits are non-refundable once work has started."
+      ]
+    },
+    {
+      "title": "10. Confidentiality",
+      "items": [
+        "Both parties agree to keep confidential information private unless authorized in writing."
+      ]
+    },
+    {
+      "title": "11. Governing Law",
+      "items": [
+        "These Terms are governed by the laws of Kenya.",
+        "Disputes will be resolved in Kenyan courts."
+      ]
+    },
+    {
+      "title": "12. Updates",
+      "items": [
+        "E-Samn Labs may update these Terms at any time. The latest version will always be available on e-samnlab.me/terms."
+      ]
+    }
+  ]
+}

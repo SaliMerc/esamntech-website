@@ -1,0 +1,65 @@
+{
+  "clauses": [
+    {
+      "title": "1. Information We Collect",
+      "items": [
+        "Personal Information: Name, email, phone number, and project details provided via forms or direct communication.",
+        "Usage Data: Basic analytics (e.g., pages visited, time on site).",
+        "Third-Party Tools: If you contact us via WhatsApp or social media, their platforms may collect additional data."
+      ]
+    },
+    {
+      "title": "2. How We Use Your Information",
+      "items": [
+        "To respond to your inquiries and provide services.",
+        "To send invoices, proposals, and project updates.",
+        "To improve our website and services.",
+        "To comply with legal obligations."
+      ]
+    },
+    {
+      "title": "3. Sharing of Information",
+      "items": [
+        "We do not sell or rent your personal data.",
+        "We may share information only with:",
+        "Service providers (e.g., hosting).",
+        "Legal authorities if required by law."
+      ]
+    },
+    {
+      "title": "4. Data Security",
+      "items": [
+        "We implement reasonable safeguards to protect your data.",
+        "However, no online transmission or storage method is 100% secure."
+      ]
+    },
+    {
+      "title": "5. Data Retention",
+      "items": [
+        "We keep your personal data only as long as necessary for the purposes outlined above.",
+        "Clients may request deletion of their data at any time."
+      ]
+    },
+    {
+      "title": "6. Your Rights",
+      "items": [
+        "Request access to the data we hold about you.",
+        "Request correction or deletion of your personal information.",
+        "Opt-out of marketing communications."
+      ]
+    },
+    {
+      "title": "7. Third-Party Links",
+      "items": [
+        "Our website may contain links to external sites (e.g., hosting providers, payment processors).",
+        "We are not responsible for the privacy practices of those third parties."
+      ]
+    },
+    {
+      "title": "8. Updates",
+      "items": [
+        "We may update this Privacy Policy occasionally. The latest version will always be posted on our website."
+      ]
+    }
+  ]
+}
