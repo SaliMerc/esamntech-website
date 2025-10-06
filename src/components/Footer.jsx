@@ -57,10 +57,10 @@ const Footer = () => {
           <h5 className="text-lg font-semibold mb-2">Contact</h5>
           <ul className="space-y-2.5 text-sm">
             <li className="flex items-center">
-              <a href="mailto:info@esamnmlabs.tech" className="hover:text-gray-300">
+              <a href="mailto:esamntech@gmail.com" className="hover:text-gray-300">
                 <img src="/icons/email-icon.svg" alt="Email"  className='pr-4'/>
                 </a>
-              <a href="mailto:info@esamnmlabs.tech" className="hover:text-gray-300">info@esamnmlabs.tech</a>
+              <a href="mailto:esamntech@gmail.com" className="hover:text-gray-300">esamntech@gmail.com</a>
             </li>
             <li className="flex items-center">
               <a href="tel:+254796009226" className="hover:text-gray-300"><img src="/icons/phone-icon.svg" alt="Email"  className='pr-4'/></a>
@@ -85,9 +85,9 @@ const Footer = () => {
       </div>
       <hr className='mt-8' />
       <div className='flex flex-col md:flex-row justify-between'>
-        <p className="text-xs mt-8 md:ml-22">© 2025 esamnmlabs. All rights reserved.</p>
+        <p className="text-xs mt-8 md:ml-22">© {new Date().getFullYear()} esamnmlabs. All rights reserved.</p>
         <p className="text-xs mt-8 md:ml-22">
-          <a href="https://esamnlabs.vercel.app/" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.e-samnlab.me/" target="_blank" rel="noopener noreferrer">
             Developed by E-Samn Labs
           </a>
         </p>
