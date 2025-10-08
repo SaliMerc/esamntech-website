@@ -15,7 +15,7 @@ const Button = ({ text, color, width, to }) => {
       <span className="relative z-10">{text}</span>
       {color !== 'white' && (
         <span
-          className={`absolute inset-0 bg-[#721B27] origin-left transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out ${
+          className={`absolute inset-0 bg-[#721B27] origin-left transform scale-x-0 group-hover:scale-x-100 transition-transform duration-900 ease-in-out ${
             color === 'maroon' ? 'group-hover:bg-[#BCAC99]' : 'group-hover:bg-[#721B27]'
           }`}
         ></span>
