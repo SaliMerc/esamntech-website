@@ -16,7 +16,7 @@ const Pricing = ({ title, price, originalPrice, features, text, buttonText, isDi
 
             {isDiscounted ? (
                 <>
-                    <p className="text-3xl font-bold mb-2 text-gray-500">
+                    <p className="text-3xl font-bold mb-2 text-[#BCAC99]">
                         <span className="text-xl">Was</span> <span className='line-through'>KES {originalPrice}</span>
                     </p>
                     <p className="text-3xl font-bold mb-5">
