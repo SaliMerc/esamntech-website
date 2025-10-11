@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Button from '../components/Button';
+import WhatsApp from "../components/WhatsappButton";
 
 
 const Header = () => {
@@ -97,6 +98,7 @@ const Header = () => {
           </div>
         </div>
       </nav>
+      <WhatsApp/>
     </header>
   );
 };
