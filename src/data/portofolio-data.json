@@ -1,17 +1,22 @@
 [
+    {
+    "title": "BlogZone",
+    "text": "Where you can read all kinds of blogs ranging from technology to lifestyle blogs",
+    "to": "https://blog-app-0ule.onrender.com/"
+  },
   {
     "title": "LughaNest",
-    "text": "Developed a Kenyan Language learning web application with peer chatting system to help learners learn kenyan languages",
+    "text": "A Kenyan Language learning web application with peer chatting system to help learners learn kenyan languages",
     "to": "https://lughanest.vercel.app/"
   },
   {
     "title": "SiteLogger",
-    "text": "Built a construction management system to help construction profesionals to easily log and report their daily activities",
+    "text": "A construction management system to help construction profesionals to easily log and report their daily activities",
     "to": "https://sitemngmtapp-4.onrender.com/"
   },
   {
     "title": "MyLangugeExchange",
-    "text": "Built a system for learning Dholuo and Kiswahili languages",
+    "text": "A system for learning Dholuo and Kiswahili languages",
     "to": "https://mylanguageapp-o795.onrender.com/"
   }
 ]
