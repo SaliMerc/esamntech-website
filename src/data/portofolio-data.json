@@ -1,5 +1,10 @@
 [
     {
+    "title": "SiteLogger (Revamp)",
+    "text": "A construction management system to help construction profesionals to easily log and report their daily activities",
+    "to": "https://sitelogger.vercel.app/"
+  },
+    {
     "title": "BlogZone",
     "text": "Where you can read all kinds of blogs ranging from technology to lifestyle blogs",
     "to": "https://blog-app-0ule.onrender.com/"
