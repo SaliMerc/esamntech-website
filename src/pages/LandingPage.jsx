@@ -156,7 +156,7 @@ uninterrupted growth.' marginTop='5rem' icon='/icons/maintenance-icon.svg' />
           <PricingDiv
             title="Business"
             text="Optimized for growing SMEs and service businesses (including E-Commerce websites)."
-            price="60,000"
+            price="60,000+"
             features={[
               "Everything in starter",
               "Advanced SEO & Analytics Setup",
@@ -172,7 +172,7 @@ uninterrupted growth.' marginTop='5rem' icon='/icons/maintenance-icon.svg' />
           <PricingDiv
             title="Custom Solution"
             text="Tailored Web and Mobile applications"
-            price="60,000+"
+            price="80,000+"
             features={[
               "Everything in business",
               "Full-Stack development",
