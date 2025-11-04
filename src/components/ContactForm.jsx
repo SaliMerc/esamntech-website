@@ -82,7 +82,7 @@ const ContactForm = () => {
     setSubmitStatus('');
 
     try {
-      await fetch("https://script.google.com/macros/s/AKfycby4wgGGOORRHhnlbmyUt3mhS2pq_bf_uqUJqs5UMzzTvc_Nd2wHEbMWa7gp-C7lbU84xQ/exec", {
+      await fetch(GOOGLE_SHEETS_URL, {
         method: 'POST',
         mode: 'no-cors',
         headers: {
