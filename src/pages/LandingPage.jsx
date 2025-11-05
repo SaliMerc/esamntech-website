@@ -138,7 +138,7 @@ uninterrupted growth.' marginTop='5rem' icon='/icons/maintenance-icon.svg' />
           <PricingDiv
             title="Starter"
             text="Ideal for small businesses or personal websites"
-            price="20,000+"
+            price="25,000+"
             features={[
               "Mobile responsive design",
               "Contact form and Basic SEO Setup",
@@ -147,8 +147,7 @@ uninterrupted growth.' marginTop='5rem' icon='/icons/maintenance-icon.svg' />
               "1 Month Maintenance & Support",
             ]}
             isPopular={false}
-            originalPrice="25,000+"
-            isDiscounted={true}
+            isDiscounted={false}
             buttonText="Get Started"
             backgroundColor="#721B27"
             textColor="#FFFAF6"
