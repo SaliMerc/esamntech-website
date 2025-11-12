@@ -74,7 +74,7 @@ const Header = () => {
         </div>
 
         {/* Mobile Navigation */}
-        <div className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'} absolute top-25 right-4 w-[90%] h-[100vh] bg-[#FFFAF6] shadow-lg rounded-lg px-10 py-4`}>
+        <div className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'} absolute top-25 right-0 w-[90%] h-[100vh] bg-[#FFFAF6] shadow-lg rounded-lg px-10 py-4 bg-opacity-50 z-40 transition-opacity duration-300`}>
           <div className="flex flex-col space-y-5">
             {navItems.map((item) => (
               <a
